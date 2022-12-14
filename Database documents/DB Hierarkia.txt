@@ -1,0 +1,17 @@
+''My Project'' (Anna Projektinimi)
+    ├───Database1 (''Database Deployments'' eli 3xClustered-DB, tämä on DB vaikkakin klusteri-nimi)
+    │   ├───Collection1
+    │   │   ├───Document1
+    │   │   ├───Document2
+    │   │   └───Document3
+    │   ├───Collection2
+    │   │   └───Document4
+    │   └───Collection3
+    │       ├───Document5
+    │       └───Document6
+    └───Database2 (''Database Deployments'' eli 3xClustered-DB, tämä on DB vaikkakin klusteri-nimi)
+        ├───Collection2
+        │   ├───Document7
+        │   └───Document8
+        └───Collection3
+            └───Document9

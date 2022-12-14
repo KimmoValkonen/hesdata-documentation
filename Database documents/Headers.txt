@@ -1,0 +1,48 @@
+MongoDB document properties:
+----------------------------
+dateTime
+solarPanels
+storageTankLow
+fireplace
+oilBurner
+storageTankHigh
+solarPump
+fireplacePump
+oilBurnerPump
+currentPower
+dailyPower
+weeklyPower
+monthlyPower
+
+App.js headers:
+---------------
+<th>Date and Time</th>
+<th>Solar Panels (High)</th>
+<th>Storage Tank (Low)</th>
+<th>Fireplace (High)</th>
+<th>Oil Burner (High)</th>
+<th>Storage Tank (High)</th>
+<th>Solar Pump</th>
+<th>Fireplace Pump</th>
+<th>Oil Burner Pump</th>
+<th>Current Power (kW)</th>
+<th>Daily Power (kWh)</th>
+<th>Weekly Power (kWh)</th>
+<th>Monthly Power (kWh)</th>
+
+App.js measurements properties:
+-------------------------------
+<td>{m._id}</td>
+<td>{m.dateTime}</td>
+<td>{m.solarPanelsHigh}</td>
+<td>{m.storageTankLow}</td>
+<td>{m.fireplaceHigh}</td>
+<td>{m.oilBurnerHigh}</td>
+<td>{m.storageTankHigh}</td>
+<td>{m.solarPump}</td>
+<td>{m.fireplacePump}</td>
+<td>{m.oilBurnerPump}</td>
+<td>{m.currentPowerkW}</td>
+<td>{m.dailyPowerkWh}</td>
+<td>{m.weeklyPowerkWh}</td>
+<td>{m.monthlyPowerkWh}</td>

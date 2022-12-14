@@ -1,0 +1,63 @@
+// MongoDB Playground
+// To disable this template go to Settings | MongoDB | Use Default Template For Playground.
+// Make sure you are connected to enable completions and to be able to run a playground.
+// Use Ctrl+Space inside a snippet or a string literal to trigger completions.
+
+// Select the database to use.
+// use('mongodbVSCodePlaygroundDB');
+
+// Cleanup datalogger documents
+db.datalogger.drop();
+
+// Insert a few documents into the HESData collection.
+db.datalogger.insertMany([
+{ "dateTime": new Date("2022-07-20T13:52:56"), "solarPanels": 84, "storageTankLow": 74, "fireplace": 26, "oilBurner": 67, "storageTankHigh": 74, "solarPump": 1.00, "fireplacePump": 0.00, "oilBurnerPump": 0.00, "currentPower": 5.6, "dailyPower": 28, "weeklyPower": 81, "monthlyPower": 433 }
+{ "dateTime": new Date("2022-07-20T14:09:58"), "solarPanels": 84, "storageTankLow": 75, "fireplace": 26, "oilBurner": 67, "storageTankHigh": 75, "solarPump": 0.97, "fireplacePump": 0.00, "oilBurnerPump": 0.00, "currentPower": 5.1, "dailyPower": 30, "weeklyPower": 83, "monthlyPower": 435 }
+{ "dateTime": new Date("2022-07-20T14:11:13"), "solarPanels": 85, "storageTankLow": 74, "fireplace": 26, "oilBurner": 67, "storageTankHigh": 75, "solarPump": 0.96, "fireplacePump": 0.00, "oilBurnerPump": 0.00, "currentPower": 5.1, "dailyPower": 30, "weeklyPower": 83, "monthlyPower": 435 }
+{ "dateTime": new Date("2022-07-20T14:15:16"), "solarPanels": 84, "storageTankLow": 75, "fireplace": 26, "oilBurner": 67, "storageTankHigh": 76, "solarPump": 0.83, "fireplacePump": 0.00, "oilBurnerPump": 0.00, "currentPower": 5.6, "dailyPower": 30, "weeklyPower": 83, "monthlyPower": 435 }
+{ "dateTime": new Date("2022-07-20T14:16:33"), "solarPanels": 84, "storageTankLow": 74, "fireplace": 26, "oilBurner": 66, "storageTankHigh": 75, "solarPump": 0.16, "fireplacePump": 0.00, "oilBurnerPump": 0.00, "currentPower": 5.6, "dailyPower": 30, "weeklyPower": 83, "monthlyPower": 435 }
+{ "dateTime": new Date("2022-07-20T14:17:48"), "solarPanels": 87, "storageTankLow": 75, "fireplace": 26, "oilBurner": 67, "storageTankHigh": 76, "solarPump": 1.00, "fireplacePump": 0.00, "oilBurnerPump": 0.00, "currentPower": 5.6, "dailyPower": 30, "weeklyPower": 83, "monthlyPower": 435 }
+{ "dateTime": new Date("2022-07-20T14:19:03"), "solarPanels": 89, "storageTankLow": 75, "fireplace": 26, "oilBurner": 67, "storageTankHigh": 76, "solarPump": 1.00, "fireplacePump": 0.00, "oilBurnerPump": 0.00, "currentPower": 6.1, "dailyPower": 31, "weeklyPower": 84, "monthlyPower": 436 }
+{ "dateTime": new Date("2022-07-20T14:21:43"), "solarPanels": 85, "storageTankLow": 75, "fireplace": 26, "oilBurner": 67, "storageTankHigh": 76, "solarPump": 0.59, "fireplacePump": 0.00, "oilBurnerPump": 0.00, "currentPower": 6.1, "dailyPower": 31, "weeklyPower": 84, "monthlyPower": 436 }
+{ "dateTime": new Date("2022-07-20T14:24:25"), "solarPanels": 88, "storageTankLow": 75, "fireplace": 26, "oilBurner": 67, "storageTankHigh": 76, "solarPump": 1.00, "fireplacePump": 0.00, "oilBurnerPump": 0.00, "currentPower": 6.1, "dailyPower": 31, "weeklyPower": 84, "monthlyPower": 436 }
+{ "dateTime": new Date("2022-07-20T14:25:39"), "solarPanels": 84, "storageTankLow": 75, "fireplace": 26, "oilBurner": 66, "storageTankHigh": 76, "solarPump": 0.65, "fireplacePump": 0.00, "oilBurnerPump": 0.00, "currentPower": 5.6, "dailyPower": 31, "weeklyPower": 84, "monthlyPower": 436 }
+{ "dateTime": new Date("2022-07-20T14:28:29"), "solarPanels": 91, "storageTankLow": 75, "fireplace": 26, "oilBurner": 67, "storageTankHigh": 76, "solarPump": 1.00, "fireplacePump": 0.00, "oilBurnerPump": 0.00, "currentPower": 5.6, "dailyPower": 31, "weeklyPower": 84, "monthlyPower": 436 }
+{ "dateTime": new Date("2022-07-20T14:29:44"), "solarPanels": 89, "storageTankLow": 75, "fireplace": 26, "oilBurner": 66, "storageTankHigh": 76, "solarPump": 1.00, "fireplacePump": 0.00, "oilBurnerPump": 0.00, "currentPower": 5.6, "dailyPower": 31, "weeklyPower": 84, "monthlyPower": 436 }
+{ "dateTime": new Date("2022-07-20T14:30:59"), "solarPanels": 85, "storageTankLow": 75, "fireplace": 26, "oilBurner": 66, "storageTankHigh": 76, "solarPump": 0.73, "fireplacePump": 0.00, "oilBurnerPump": 0.00, "currentPower": 5.1, "dailyPower": 32, "weeklyPower": 85, "monthlyPower": 437 }
+]);
+
+// Run a find command to view items sold on April 4th, 2014.
+db.datalogger.find({ dateTime: { $gte: new Date("2022-07-20T14:16:33"), $lt: new Date("2022-07-20T14:28:29") } });
+
+// Select the database to use.
+// use('mongodbVSCodePlaygroundDB');
+
+// The drop() command destroys all data from a collection.
+// Make sure you run it against the correct database and collection.
+// db.sales.drop();
+
+// Insert a few documents into the sales collection.
+// db.sales.insertMany([
+//   { '_id': 1, 'item': 'abc', 'price': 10, 'quantity': 2, 'date': new Date('2014-03-01T08:00:00Z') },
+//   { '_id': 2, 'item': 'jkl', 'price': 20, 'quantity': 1, 'date': new Date('2014-03-01T09:00:00Z') },
+//   { '_id': 3, 'item': 'xyz', 'price': 5, 'quantity': 10, 'date': new Date('2014-03-15T09:00:00Z') },
+//   { '_id': 4, 'item': 'xyz', 'price': 5, 'quantity':  20, 'date': new Date('2014-04-04T11:21:39.736Z') },
+//   { '_id': 5, 'item': 'abc', 'price': 10, 'quantity': 10, 'date': new Date('2014-04-04T21:23:13.331Z') },
+//   { '_id': 6, 'item': 'def', 'price': 7.5, 'quantity': 5, 'date': new Date('2015-06-04T05:08:13Z') },
+//   { '_id': 7, 'item': 'def', 'price': 7.5, 'quantity': 10, 'date': new Date('2015-09-10T08:43:00Z') },
+//   { '_id': 8, 'item': 'abc', 'price': 10, 'quantity': 5, 'date': new Date('2016-02-06T20:20:13Z') },
+// ]);
+
+// Run a find command to view items sold on April 4th, 2014.
+// db.sales.find({ date: { $gte: new Date('2014-04-04'), $lt: new Date('2014-04-05') } });
+
+// Build an aggregation to view total sales for each product in 2014.
+// const aggregation = [
+//   { $match: { date: { $gte: new Date("2022-07-20T14:16:33"), $lt: new Date("2022-07-20T14:28:29") } } },
+//   { $group: { _id: '$item', totalSaleAmount: { $sum: { $multiply: [ '$price', '$quantity' ] } } } }
+// ];
+
+// Run the aggregation and open a cursor to the results.
+// Use toArray() to exhaust the cursor to return the whole result set.
+// You can use hasNext()/next() to iterate through the cursor page by page.
+// db.sales.aggregate(aggregation);
